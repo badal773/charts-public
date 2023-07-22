@@ -1,51 +1,28 @@
 {
-    "title": "System Configuration",
-    "elements": [
-      {
-        "type": "input",
-        "label": "Email",
-        "name": "email",
-        "required": true,
-        "validation": {
-          "type": "email",
-          "message": "Please enter a valid email address."
-        }
-      },
-      {
-        "type": "section",
-        "label": "Modify Cores",
-        "elements": [
-          {
-            "type": "checkbox",
-            "label": "Enable Modify Cores",
-            "name": "modifyCores",
-            "default": false
-          },
-          {
-            "type": "select",
-            "label": "Number of Cores",
-            "name": "numCores",
-            "options": [
-              {"label": "2", "value": 2},
-              {"label": "4", "value": 4},
-              {"label": "8", "value": 8}
-            ],
-            "default": 2,
-            "visible": "data.modifyCores === true"
-          }
-        ]
-      },
-        {
-    "title": "Devtron Installation",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "properties": {
-      "enableDevtron": {
+      "email": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9._%+-]+@devtron.ai$",
+        "description": "Email address ending with @com."
+      },
+      "cores": {
+        "type": "integer",
+        "enum": [2, 4, 8],
+        "description": "Customize your cores: Choose 2, 4, or 8 cores."
+      },
+      "storage": {
+        "type": "integer",
+        "minimum": 31,
+        "description": "Modify storage: Only values greater than 30 are allowed."
+      },
+      "install_devtron": {
         "type": "boolean",
-        "title": "Enable Devtron Installation",
-        "default": false
+        "description": "Choose whether to install devtron or not."
       }
-    }
-  }
-    ]
+    },
+    "required": ["email"],
+    "additionalProperties": false
   }
   

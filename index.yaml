@@ -3,12 +3,12 @@ entries:
   chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-22T11:13:42.317737+05:30"
+    created: "2023-07-22T13:19:34.181953+05:30"
     description: A Helm chart for Kubernetes
-    digest: e68c23ffa141e59ea3ddb71126f531b31bc98dbc305c77374bf3b1c8f39f8d2c
+    digest: 9bb3177735d211c1ca1a4309f28dad32cd9d6b17a5f60453e9b2d517d172d16e
     name: chart
     type: application
     urls:
-    - https://github.com/badal773/charts-public.git/chart/chart-0.1.0.tgz
+    - https://github.com/badal773/charts-public.git/chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-22T11:13:42.316901+05:30"
+generated: "2023-07-22T13:19:34.180944+05:30"
