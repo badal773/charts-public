@@ -1,56 +1,51 @@
 {
-    "$schema": "http://json-schema.org/schema#",
+    "title": "System Configuration",
+    "elements": [
+      {
+        "type": "input",
+        "label": "Email",
+        "name": "email",
+        "required": true,
+        "validation": {
+          "type": "email",
+          "message": "Please enter a valid email address."
+        }
+      },
+      {
+        "type": "section",
+        "label": "Modify Cores",
+        "elements": [
+          {
+            "type": "checkbox",
+            "label": "Enable Modify Cores",
+            "name": "modifyCores",
+            "default": false
+          },
+          {
+            "type": "select",
+            "label": "Number of Cores",
+            "name": "numCores",
+            "options": [
+              {"label": "2", "value": 2},
+              {"label": "4", "value": 4},
+              {"label": "8", "value": 8}
+            ],
+            "default": 2,
+            "visible": "data.modifyCores === true"
+          }
+        ]
+      },
+        {
+    "title": "Devtron Installation",
     "type": "object",
     "properties": {
-      "ingress": {
-        "type": "object",
-        "form": true,
-        "title": "Ingress Configuration",
-        "properties": {
-          "enabled": {
-            "type": "boolean",
-            "form": true,
-            "title": "Use a custom hostname",
-            "description": "Enable the ingress resource that allows you to access the Apache installation."
-          },
-          "hostname": {
-            "type": "string",
-            "form": true,
-            "title": "Hostname",
-            "hidden": {
-              "value": false,
-              "path": "ingress/enabled"
-            }
-          }
-        }
-      },
-      "service": {
-        "type": "object",
-        "form": true,
-        "title": "Service Configuration",
-        "properties": {
-          "type": {
-            "type": "string",
-            "form": true,
-            "title": "Service Type",
-            "description": "Allowed values: \"ClusterIP\", \"NodePort\" and \"LoadBalancer\""
-          }
-        }
-      },
-      "replicaCount": {
-        "type": "integer",
-        "form": true,
-        "title": "Number of Replicas"
-      },
-      "metrics": {
-        "type": "object",
-        "properties": {
-          "enabled": {
-            "type": "boolean",
-            "title": "Configure metrics exporter",
-            "form": true
-          }
-        }
+      "enableDevtron": {
+        "type": "boolean",
+        "title": "Enable Devtron Installation",
+        "default": false
       }
     }
   }
+    ]
+  }
+  
