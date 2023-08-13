@@ -11,7 +11,8 @@
     },
     "installDevtron": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "description": "please click here if you want to  install Devtron"
     }
   },
   "required": ["email"],
