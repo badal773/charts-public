@@ -1,28 +1,17 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "object",
-    "properties": {
-      "email": {
-        "type": "string",
-        "pattern": "^[a-zA-Z0-9._%+-]+@devtron.ai$",
-        "description": "Email address ending with @com."
-      },
-      "cores": {
-        "type": "integer",
-        "enum": [2, 4, 8],
-        "description": "Customize your cores: Choose 2, 4, or 8 cores."
-      },
-      "storage": {
-        "type": "integer",
-        "minimum": 31,
-        "description": "Modify storage: Only values greater than 30 are allowed."
-      },
-      "install_devtron": {
-        "type": "boolean",
-        "description": "Choose whether to install devtron or not."
-      }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9._%+-]+@devtron\\.ai$",
+      "errorMessage": "Email must end with @badal.com"
     },
-    "required": ["email"],
-    "additionalProperties": false
-  }
-  
+    "installDevtron": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": ["email"],
+  "additionalProperties": false
+}
