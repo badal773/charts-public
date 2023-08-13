@@ -6,12 +6,14 @@
   "properties": {
     "email": {
       "type": "string",
-      "pattern": "^[a-zA-Z0-9._%+-]+@devtron\\.ai$",
-      "description": "Email ID ending with @devtron.ai"
+      "pattern": "^[a-zA-Z0-9._%+-]+@badal\\.com$",
+      "title": "Email",
+      "description": "Email ID ending with @badal.com"
     },
     "installDevtron": {
       "type": "boolean",
       "default": false,
+      "title": "Install Devtron",
       "description": "Specify whether to install Devtron. Default is false."
     }
   },
@@ -19,7 +21,7 @@
   "additionalProperties": false,
   "examples": [
     {
-      "email": "yourname@devtron.ai",
+      "email": "yourname@badal.com",
       "installDevtron": false
     }
   ]
