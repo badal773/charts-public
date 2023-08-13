@@ -5,7 +5,9 @@
     "email": {
       "type": "string",
       "pattern": "^[a-zA-Z0-9._%+-]+@devtron\\.ai$",
-      "errorMessage": "Email must end with @badal.com"
+      "errorMessage": "Email must end with @badal.com",
+      "title": "Email-Id",
+      "description": "please enter your email-id"
     },
     "installDevtron": {
       "type": "boolean",
