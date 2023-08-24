@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ template "replaceAtWithDash" .Values.email_id }}
+spec:
+  template:
+    spec:
+      containers:
+        - name: job-container
+          image: {{ $.Values.image }}
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          env:
+              - name: email-id
+                value: {{ .Values.email_id }}
+          {{- if  .Values.Env }}
+          {{ toYaml .Values.Env | indent 14 }}
+          {{- end }}
+          resources: {{ toYaml .Values.resources | indent 10 }}
+          imagePullSecrets:
+            - name: {{ .Values.imagePullSecrets  }}
+      restartPolicy: Never
+      affinity: 
+        {{ toYaml .Values.affinity | nindent 8 }}
+      nodeSelector: 
+        {{ toYaml .Values.nodeSelector | nindent 8 }}
+
+  

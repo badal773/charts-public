@@ -1,14 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "VM Creation Job Configuration",
-  "description": "This job is run to create a microk8s cluster for you. It takes your email ID as input and sends you all the details of the cluster.",
   "type": "object",
   "properties": {
-    "email": {
+    "email_id": {
       "type": "string",
-      "pattern": "^[a-zA-Z0-9._%+-]+@badal\\.com$",
-      "title": "Email",
-      "description": "Email ID ending with @badal.com"
+      "pattern": "^[a-zA-Z0-9._%+-]+@devtron\\.ai$",
+      "title": "VM Creation Job Configuration .\n Please enter Email-id ",
+      "description": "Email ID ending with @devtron.ai. \n This job is run to create a microk8s cluster for you. It takes your email ID as input and sends you all the details of the cluster."
     },
     "installDevtron": {
       "type": "boolean",
@@ -18,11 +16,5 @@
     }
   },
   "required": ["email"],
-  "additionalProperties": false,
-  "examples": [
-    {
-      "email": "yourname@badal.com",
-      "installDevtron": false
-    }
-  ]
-}
+  "additionalProperties": false
+  }
