@@ -6,6 +6,8 @@
   "title": "Root Schema",
   "required": [
       "email-id",
+      "no_of_cores",
+      "volume_size",
       "want_to_install_microk8s",
       "want_to_install_devtron"
   ],
@@ -13,15 +15,31 @@
       "email-id": {
           "type": "string",
           "default": "",
-          "title": "Enter email-id-:",
+          "title": "Enter The Email-id-:",
           "examples": [
               "test@devtron.ai"
           ]
       },
+      "no_of_cores": {
+          "type": "string",
+          "default": "2",
+          "title": "Enter the no_of_cores do you want-: 2/4/8",
+          "examples": [
+              "2"
+          ]
+      },
+      "volume_size": {
+          "type": "string",
+          "default": "",
+          "title": "Enter the volume size you want-: ",
+          "examples": [
+              "30"
+          ]
+      },
       "want_to_install_microk8s": {
           "type": "boolean",
-          "default": true,
-          "title": "The want_to_install_microk8s-:",
+          "default": false,
+          "title": "Do you want to install microk8s ",
           "examples": [
               true
           ]
@@ -29,7 +47,7 @@
       "want_to_install_devtron": {
           "type": "boolean",
           "default": false,
-          "title": "The want_to_install_devtron Schema",
+          "title": "Do you want to install Devtron",
           "examples": [
               true
           ]
@@ -37,6 +55,8 @@
   },
   "examples": [{
       "email-id": "test@devtron.ai",
+      "no_of_cores": "2",
+      "volume_size": "30",
       "want_to_install_microk8s": true,
       "want_to_install_devtron": true
   }]
