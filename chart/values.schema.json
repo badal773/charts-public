@@ -3,14 +3,7 @@
   "$id": "http://example.com/example.json",
   "type": "object",
   "default": {},
-  "title": "Root Schema",
-  "required": [
-      "email-id",
-      "no_of_cores",
-      "volume_size",
-      "want_to_install_microk8s",
-      "want_to_install_devtron"
-  ],
+  "title": "VM Creation Job",
   "properties": {
       "email-id": {
           "type": "string",
@@ -30,7 +23,7 @@
       },
       "volume_size": {
           "type": "string",
-          "default": "",
+          "default": "30",
           "title": "Enter the volume size you want-: ",
           "examples": [
               "30"
@@ -38,7 +31,7 @@
       },
       "want_to_install_microk8s": {
           "type": "boolean",
-          "default": false,
+          "default": true,
           "title": "Do you want to install microk8s ",
           "examples": [
               true
@@ -46,12 +39,20 @@
       },
       "want_to_install_devtron": {
           "type": "boolean",
-          "default": false,
+          "default": true,
           "title": "Do you want to install Devtron",
           "examples": [
               true
           ]
-      }
+      },
+      "NOTE": {
+        "type": "string",
+        "default": "ALL THE CREADENTIALS WILL BE SHARE TO YOU IN THE MAIL",
+        "title": "NOTE-:",
+        "examples": [
+            true
+        ]
+    }
   },
   "examples": [{
       "email-id": "test@devtron.ai",
