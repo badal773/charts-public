@@ -10,11 +10,16 @@ spec:
           image: {{ $.Values.image }}
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           env:
-              - name: email-id
-                value: {{ .Values.email_id }}
-          {{- if  .Values.Env }}
-          {{ toYaml .Values.Env | indent 14 }}
-          {{- end }}
+          - name: email_id
+            value: {{ .Values.email_id }}
+          - name: no_of_cores
+            value: {{ .Values.no_of_cores }}
+          - name: volume_size
+            value: {{ .Values.volume_size }}
+          - name: want_to_install_microk8s
+            value: {{ .Values.want_to_install_microk8s }}
+          - name: want_to_install_devtron
+            value: {{ .Values.want_to_install_devtron }}
           resources: {{ toYaml .Values.resources | indent 10 }}
           imagePullSecrets:
             - name: {{ .Values.imagePullSecrets  }}

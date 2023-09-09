@@ -1,0 +1,42 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "ROUT-53 Schema", 
+    "properties": {
+        "IP_ADDRESS": {
+            "type": "string",
+            "default": "",
+            "title": "ENTER THE IP_ADDRESS  e.g-: 0.0.0.0 ",
+            "examples": [
+                "0.0.0.0"
+            ]
+        },
+        "DOMAIN_NAME": {
+            "type": "string",
+            "default": "",
+            "title": "ENTER THE  DOMAIN_NAME   e.g-: test.devtron.info ",
+            "examples": [
+                "test.devtron.info"
+            ]
+        },
+        "TYPE": {
+            "type": "object",
+            "default": {},
+            "title": "The TYPE OF RECORD-:",
+            "properties": {
+                "A": {
+                    "type": "boolean",
+                    "default": true,
+                    "title": "A record is used to points a name to specific IP Address"
+                },
+                "CNAME": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "C-NAME record is used to points loadbalancer of aws"
+                }
+            }
+        }
+    }
+}

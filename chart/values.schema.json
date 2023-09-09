@@ -5,7 +5,7 @@
   "default": {},
   "title": "VM Creation Job",
   "properties": {
-      "email-id": {
+      "email_id": {
           "type": "string",
           "default": "",
           "title": "Enter The Email-id-:",
@@ -47,18 +47,13 @@
       },
       "NOTE": {
         "type": "string",
-        "default": "ALL THE CREADENTIALS WILL BE SHARE TO YOU IN THE MAIL",
+        "default": "ALL THE CREADENTIALS WILL BE SHARE TO YOU IN THE EMAIL",
         "title": "NOTE-:",
         "examples": [
             true
         ]
     }
   },
-  "examples": [{
-      "email-id": "test@devtron.ai",
-      "no_of_cores": "2",
-      "volume_size": "30",
-      "want_to_install_microk8s": true,
-      "want_to_install_devtron": true
-  }]
+  "NOTE": "ALL THE CREDENTIALS WILL BE SHARED TO YOU IN THE EMAIL."
+
 }

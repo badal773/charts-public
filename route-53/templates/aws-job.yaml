@@ -1,0 +1,64 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: aws-route53-edit-job
+spec:
+  template:
+    spec:
+      containers:
+        - name: aws-cli
+          image: amazon/aws-cli:latest
+          command: ["sh", "-c"]
+          args:
+            - |
+              # Authenticate to AWS using secrets
+              aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+              aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+              aws configure set default.region $AWS_REGION
+
+              # Perform Route 53 update
+              aws route53 change-resource-record-sets \
+                --hosted-zone-id $HOSTED_ZONE_ID \
+                --change-batch '{
+                    "Changes": [
+                      {
+                        "Action": "UPSERT",
+                        "ResourceRecordSet": {
+                          "Name": "$DOMAIN_NAME",
+                          "Type": "$TYPE",
+                          "TTL": 300,
+                          "ResourceRecords": [
+                            {
+                              "Value": "$IP_ADDRESS"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }'
+
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: aws-secret
+                  key: access-key
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: aws-secret
+                  key: secret-key
+            - name: DOMAIN_NAME
+              value: {{ $.Values.DOMAIN_NAME }} # Replace with your domain
+            - name: IP_ADDRESS
+              value: {{ $.Values.IP_ADDRESS }} # Replace with the desired IP address
+            - name: TYPE
+              value: {{ $.Values.TYPE  }}
+            - name: HOSTED_ZONE_ID
+              valueFrom:
+                secretKeyRef:
+                  name: aws-secret
+                  key: HOSTED_ZONE_ID
+
+      restartPolicy: Never
+  backoffLimit: 4
