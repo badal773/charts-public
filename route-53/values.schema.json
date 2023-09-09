@@ -21,22 +21,22 @@
                 "test.devtron.info"
             ]
         },
-        "TYPE": {
-            "type": "object",
-            "default": {},
-            "title": "The TYPE OF RECORD-:",
-            "properties": {
-                "A": {
-                    "type": "boolean",
-                    "default": true,
-                    "title": "A record is used to points a name to specific IP Address"
-                },
-                "CNAME": {
-                    "type": "boolean",
-                    "default": false,
-                    "title": "C-NAME record is used to points loadbalancer of aws"
-                }
-            }
+        ,
+        "TYPE_RECORD_A": {
+            "type": "boolean",
+            "default": false,
+            "title": " TYPE_RECORD_A  \n A record is used to points a name to specific IP Address",
+            "examples": [
+                true
+            ]
+        },
+        "TYPE_RECORD_CNAME": {
+            "type": "boolean",
+            "default": false,
+            "title": "The TYPE_RECORD_CNAME \n C-NAME record is used to points loadbalancer of aws",
+            "examples": [
+                false
+            ]
         }
     }
 }
