@@ -3,12 +3,23 @@ entries:
   chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-22T13:19:34.181953+05:30"
+    created: "2023-09-10T00:13:09.269841+05:30"
     description: A Helm chart for Kubernetes
-    digest: 9bb3177735d211c1ca1a4309f28dad32cd9d6b17a5f60453e9b2d517d172d16e
+    digest: d3c0c1ff6094a41eccf857329c42eea6edffe1b13138d6c18300baf6249eb068
     name: chart
     type: application
     urls:
     - https://github.com/badal773/charts-public/raw/main/chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-22T13:19:34.180944+05:30"
+  route-53:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-09-10T00:13:09.270121+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 8767240f51c96b1b30f0d6cf9f2a2ec6f96b36b03c34c3711c126d47bf6a618d
+    name: route-53
+    type: application
+    urls:
+    - https://github.com/badal773/charts-public/raw/main/route-53-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-09-10T00:13:09.268521+05:30"
