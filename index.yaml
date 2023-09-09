@@ -3,9 +3,9 @@ entries:
   chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-09-10T00:13:09.269841+05:30"
+    created: "2023-09-10T00:49:07.56262+05:30"
     description: A Helm chart for Kubernetes
-    digest: d3c0c1ff6094a41eccf857329c42eea6edffe1b13138d6c18300baf6249eb068
+    digest: d667a21ae01ed29c8615c08e10736905c457f91280e943f3ff11d6b91b3faa6b
     name: chart
     type: application
     urls:
@@ -14,12 +14,21 @@ entries:
   route-53:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-09-10T00:13:09.270121+05:30"
+    created: "2023-09-10T00:49:07.562798+05:30"
     description: A Helm chart for Kubernetes
-    digest: 8767240f51c96b1b30f0d6cf9f2a2ec6f96b36b03c34c3711c126d47bf6a618d
+    digest: f00cd56b8e67db0c8ed131599d38992a62e44f8b5a64eec7b796bf1cb2c79d62
     name: route-53
     type: application
     urls:
     - https://github.com/badal773/charts-public/raw/main/route-53-0.1.0.tgz
     version: 0.1.0
-generated: "2023-09-10T00:13:09.268521+05:30"
+  vm-operations:
+  - apiVersion: v2
+    created: "2023-09-10T00:49:07.562959+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 6432ad47c97f72f6c2cd9990beda33655bb292e1e00e80c2ebdc6cb49b3aa68f
+    name: vm-operations
+    urls:
+    - https://github.com/badal773/charts-public/raw/main/vm-operations-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-09-10T00:49:07.561846+05:30"
