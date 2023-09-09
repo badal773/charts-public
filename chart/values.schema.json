@@ -1,20 +1,43 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
   "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+      "email-id",
+      "want_to_install_microk8s",
+      "want_to_install_devtron"
+  ],
   "properties": {
-    "email_id": {
-      "type": "string",
-      "pattern": "^[a-zA-Z0-9._%+-]+@devtron\\.ai$",
-      "title": "VM Creation Job Configuration .\n Please enter Email-id ",
-      "description": "Email ID ending with @devtron.ai. \n This job is run to create a microk8s cluster for you. It takes your email ID as input and sends you all the details of the cluster."
-    },
-    "installDevtron": {
-      "type": "boolean",
-      "default": false,
-      "title": "Install Devtron",
-      "description": "Specify whether to install Devtron. Default is false."
-    }
+      "email-id": {
+          "type": "string",
+          "default": "",
+          "title": "Enter email-id-:",
+          "examples": [
+              "test@devtron.ai"
+          ]
+      },
+      "want_to_install_microk8s": {
+          "type": "boolean",
+          "default": true,
+          "title": "The want_to_install_microk8s-:",
+          "examples": [
+              true
+          ]
+      },
+      "want_to_install_devtron": {
+          "type": "boolean",
+          "default": false,
+          "title": "The want_to_install_devtron Schema",
+          "examples": [
+              true
+          ]
+      }
   },
-  "required": ["email"],
-  "additionalProperties": false
-  }
+  "examples": [{
+      "email-id": "test@devtron.ai",
+      "want_to_install_microk8s": true,
+      "want_to_install_devtron": true
+  }]
+}

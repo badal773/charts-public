@@ -11,7 +11,7 @@ Env:
   - name: INSTALL_MICROK8s
     value: "true"
 imagePullSecrets: test
-
+email_id: ""
 
 resources: {}
   # limits:
@@ -24,3 +24,4 @@ resources: {}
 nodeSelector: {}
 
 affinity: {}
+rawYaml: []
