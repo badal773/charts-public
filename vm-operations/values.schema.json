@@ -1,0 +1,49 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": " Schema",
+    "properties": {
+        "email_id": {
+            "type": "string",
+            "default": "",
+            "title": "ENTER THE EMAIL-ID",
+            "examples": [
+                ""
+            ]
+        },
+        "WANT_TO_START": {
+            "type": "boolean",
+            "default": false,
+            "title": "WANT TO START YOUR VM",
+            "examples": [
+                true
+            ]
+        },
+        "WANT_TO_STOP": {
+            "type": "boolean",
+            "default": false,
+            "title": "WANT TO STOP YOUR VM",
+            "examples": [
+                false
+            ]
+        },
+        "WANT_TO_RESTART": {
+            "type": "boolean",
+            "default": false,
+            "title": "WANT TO RESTART YOUR VM",
+            "examples": [
+                false
+            ]
+        },
+        "WANT_TO_DELETE": {
+            "type": "boolean",
+            "default": false,
+            "title": "WANT TO DELETE YOUR VM",
+            "examples": [
+                false
+            ]
+        }
+    }
+}
