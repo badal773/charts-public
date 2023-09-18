@@ -1,19 +1,27 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: your-job-name
+  generateName: Vm-operations-
 spec:
   template:
     metadata:
-      name: your-pod-name
+      name: vm-operations
     spec:
       containers:
-      - name: your-container-name
-        image: your-docker-image
-        command: ["/bin/bash", "-c"]
-        args:
-        - |
-          #!/bin/bash
-          # Add your Bash commands here
-          echo "Hello, World!"
+      - name: vm-operations
+        image: badal773/private:vm-operation-v1
+        command: ["/bin/bash", "azure-operations.sh"]
+        env:
+          - name: EMAIL_ID
+            values: {{ $.Values.email_id }}
+          - name: WANT_TO_START
+            values: {{ $.Values.WANT_TO_START }}
+          - name: WANT_TO_STOP
+            values: {{ $.Values.WANT_TO_STOP }}
+          - name: WANT_TO_RESTART
+            values: {{ $.Values.WANT_TO_RESTART }}
+          - name: WANT_TO_DELETE
+            values: {{ $.Values.WANT_TO_DELETE }}
       restartPolicy: Never
+      imagepullsecret: 
+        - name: vm-operation

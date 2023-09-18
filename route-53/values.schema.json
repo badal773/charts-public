@@ -8,34 +8,22 @@
         "IP_ADDRESS": {
             "type": "string",
             "default": "",
-            "title": "ENTER THE IP_ADDRESS  \n e.g-: 0.0.0.0 ",
-            "examples": [
-                "0.0.0.0"
-            ]
-        },
+            "title": "ENTER THE IP_ADDRESS   e.g-: 0.0.0.0 "
+                },
         "DOMAIN_NAME": {
             "type": "string",
             "default": "",
-            "title": "ENTER THE  DOMAIN_NAME  \n  e.g-: test.devtron.info ",
-            "examples": [
-                "test.devtron.info"
-            ]
+            "title": "ENTER THE  DOMAIN_NAME     e.g-: test.devtron.info "
+                },
+        "A": {
+            "type": "boolean",
+            "default": true,
+            "title": " TYPE_RECORD_A  [A record is used to points a name to specific IP Address]"
         },
-        "TYPE_RECORD_A": {
+        "CNAME": {
             "type": "boolean",
             "default": false,
-            "title": " TYPE_RECORD_A  \n A record is used to points a name to specific IP Address",
-            "examples": [
-                true
-            ]
-        },
-        "TYPE_RECORD_CNAME": {
-            "type": "boolean",
-            "default": false,
-            "title": "The TYPE_RECORD_CNAME \n C-NAME record is used to points loadbalancer of aws",
-            "examples": [
-                false
-            ]
+            "title": "The TYPE_RECORD_CNAME  [C-NAME record is used to points loadbalancer of aws]"
         }
     }
 }

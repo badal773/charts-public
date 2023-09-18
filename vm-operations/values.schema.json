@@ -8,42 +8,27 @@
         "email_id": {
             "type": "string",
             "default": "",
-            "title": "ENTER THE EMAIL-ID",
-            "examples": [
-                ""
-            ]
+            "title": "ENTER THE EMAIL-ID"
         },
         "WANT_TO_START": {
             "type": "boolean",
-            "default": false,
-            "title": "WANT TO START YOUR VM",
-            "examples": [
-                true
-            ]
+            "default": true,
+            "title": "WANT TO START YOUR VM"
         },
         "WANT_TO_STOP": {
             "type": "boolean",
             "default": false,
-            "title": "WANT TO STOP YOUR VM",
-            "examples": [
-                false
-            ]
+            "title": "WANT TO STOP YOUR VM"
         },
         "WANT_TO_RESTART": {
             "type": "boolean",
             "default": false,
-            "title": "WANT TO RESTART YOUR VM",
-            "examples": [
-                false
-            ]
+            "title": "WANT TO RESTART YOUR VM"
         },
         "WANT_TO_DELETE": {
             "type": "boolean",
             "default": false,
-            "title": "WANT TO DELETE YOUR VM",
-            "examples": [
-                false
-            ]
+            "title": "WANT TO DELETE YOUR VM"
         }
     }
 }
