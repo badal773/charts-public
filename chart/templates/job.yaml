@@ -22,7 +22,7 @@ spec:
             value: {{ .Values.want_to_install_devtron }}
           resources: {{ toYaml .Values.resources | indent 10 }}
           imagePullSecrets:
-            - name: {{ .Values.imagePullSecrets  }}
+            - name: vm-operation
       restartPolicy: Never
       affinity: 
         {{ toYaml .Values.affinity | nindent 8 }}
