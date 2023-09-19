@@ -7,8 +7,7 @@ spec:
     spec:
       containers:
         - name: job-container
-          image: {{ $.Values.image }}
-          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          image: badal773/private:vm-creation-v1
           env:
           - name: email_id
             value: {{ .Values.email_id }}
