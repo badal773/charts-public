@@ -4,13 +4,16 @@
     "type": "object",
     "default": {},
     "title": "ROUT-53 Schema", 
-    "properties": {
+    "properties":
+     {
         "IP_ADDRESS": {
             "type": "string",
+            "default": "",
             "title": "ENTER THE IP_ADDRESS   e.g-: 0.0.0.0 "
                 },
         "DOMAIN_NAME": {
             "type": "string",
+            "default": "",
             "title": "ENTER THE  DOMAIN_NAME     e.g-: test.devtron.info "
                 },
         "A": {

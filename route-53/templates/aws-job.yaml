@@ -20,18 +20,17 @@ spec:
                 secretKeyRef:
                   name: aws-secret
                   key: AWS_SECRET_ACCESS_KEY
-            - name: DOMAIN_NAME
-              value: {{ $.Values.DOMAIN_NAME  | quote}} # Replace with your domain
-            - name: IP_ADDRESS
-              value: {{ $.Values.IP_ADDRESS | quote }} # Replace with the desired IP address
-            - name: A
-              value: {{ $.Values.A |default "true"  | quote}}
-            - name: CNAME
-              value: {{ $.Values.CNAME | quote  }}
             - name: HOSTED_ZONE_ID
               valueFrom:
                 secretKeyRef:
                   name: aws-secret
                   key: HOSTED_ZONE_ID
-      restartPolicy: Never
-  backoffLimit: 4
+            - name: DOMAIN_NAME
+              value: {{ $.Values.DOMAIN_NAME }} 
+            - name: IP_ADDRESS
+              value: {{ $.Values.IP_ADDRESS  }} 
+            - name: A
+              value: {{ $.Values.A |default "true"  | quote}}
+            - name: CNAME
+              value: {{ $.Values.CNAME | quote  }}
+
