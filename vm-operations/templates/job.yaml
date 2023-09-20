@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: Vm-operations-
+  name: {{ template "replaceAtWithRandom"}}
 spec:
   template:
     metadata:

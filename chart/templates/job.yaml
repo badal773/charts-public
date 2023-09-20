@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: {{ template "replaceAtWithDash" .Values.email_id }}
+  name: {{ template "replaceAtWithRandom" .Values.email_id }}
 spec:
   template:
     spec:
@@ -19,6 +19,6 @@ spec:
             value: {{ .Values.want_to_install_microk8s | default "true"  | quote}}
           - name: want_to_install_devtron
             value: {{ .Values.want_to_install_devtron |default "true" | quote }}
-        imagePullSecrets:
-            - name: vm-operation
+      imagePullSecrets:
+          - name: vm-operation
       restartPolicy: Never

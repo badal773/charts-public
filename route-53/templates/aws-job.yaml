@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: aws-route53-edit-job-
+  name: {{ template "replaceAtWithRandom" }} 
 spec:
   template:
     spec:
