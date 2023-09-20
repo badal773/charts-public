@@ -12,7 +12,7 @@
         },
         "WANT_TO_START": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "title": "WANT TO START YOUR VM"
         },
         "WANT_TO_STOP": {
