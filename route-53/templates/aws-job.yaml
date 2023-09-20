@@ -21,13 +21,13 @@ spec:
                   name: aws-secret
                   key: secret-key
             - name: DOMAIN_NAME
-              value: {{ $.Values.DOMAIN_NAME }} # Replace with your domain
+              value: {{ $.Values.DOMAIN_NAME  | quote}} # Replace with your domain
             - name: IP_ADDRESS
-              value: {{ $.Values.IP_ADDRESS }} # Replace with the desired IP address
+              value: {{ $.Values.IP_ADDRESS | quote }} # Replace with the desired IP address
             - name: A
-              value: {{ $.Values.A |default "true" }}
+              value: {{ $.Values.A |default "true"  | quote}}
             - name: CNAME
-              value: {{ $.Values.CNAME  }}
+              value: {{ $.Values.CNAME | quote  }}
             - name: HOSTED_ZONE_ID
               valueFrom:
                 secretKeyRef:
