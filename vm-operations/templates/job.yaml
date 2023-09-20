@@ -23,5 +23,7 @@ spec:
           - name: WANT_TO_DELETE
             values: {{ $.Values.WANT_TO_DELETE  | quote}}
       restartPolicy: Never
-      imagepullsecret: 
-        - name: vm-operation
+      imagePullPolicy: Always
+      imagePullSecrets:
+          - name: vm-operation
+
