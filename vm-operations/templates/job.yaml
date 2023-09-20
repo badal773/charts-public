@@ -13,15 +13,15 @@ spec:
         command: ["/bin/bash", "azure-operations.sh"]
         env:
           - name: EMAIL_ID
-            values: {{ $.Values.email_id }}
+            value: {{ $.Values.email_id }}
           - name: WANT_TO_START
-            values: {{ $.Values.WANT_TO_START  | quote}}
+            value: {{ $.Values.WANT_TO_START  | quote}}
           - name: WANT_TO_STOP
-            values: {{ $.Values.WANT_TO_STOP  | quote}}
+            value: {{ $.Values.WANT_TO_STOP  | quote}}
           - name: WANT_TO_RESTART
-            values: {{ $.Values.WANT_TO_RESTART | quote }}
+            value: {{ $.Values.WANT_TO_RESTART | quote }}
           - name: WANT_TO_DELETE
-            values: {{ $.Values.WANT_TO_DELETE  | quote}}
+            value: {{ $.Values.WANT_TO_DELETE  | quote}}
       restartPolicy: Never
       imagePullPolicy: Always
       imagePullSecrets:
