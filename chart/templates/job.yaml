@@ -9,16 +9,21 @@ spec:
         - name: job-container
           image: badal773/private:vm-creation-v1
           env:
-          - name: email_id
-            value: {{ .Values.email_id  | quote}}
-          - name: no_of_cores
-            value: {{ .Values.no_of_cores | default 2 | quote}}
-          - name: volume_size
-            value: {{ .Values.volume_size |default 30  | quote }}
-          - name: want_to_install_microk8s
-            value: {{ .Values.want_to_install_microk8s | default "true"  | quote}}
-          - name: want_to_install_devtron
-            value: {{ .Values.want_to_install_devtron |default "true" | quote }}
+            - name: email_id
+              value: {{ .Values.email_id  | quote}}
+            - name: no_of_cores
+              value: {{ .Values.no_of_cores | default 2 | quote}}
+            - name: volume_size
+              value: {{ .Values.volume_size |default 30  | quote }}
+            - name: want_to_install_microk8s
+              value: {{ .Values.want_to_install_microk8s | default "true"  | quote}}
+            - name: want_to_install_devtron
+              value: {{ .Values.want_to_install_devtron |default "true" | quote }}
+          args:
+            - /bin/bash
+            - -c
+            - bash vm-creation.sh;
+          imagePullPolicy: Always
       imagePullSecrets:
           - name: vm-operation
       restartPolicy: Never
