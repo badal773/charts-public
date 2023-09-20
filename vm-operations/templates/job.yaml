@@ -10,7 +10,11 @@ spec:
       containers:
       - name: vm-operations
         image: badal773/private:vm-operation-v1
-        command: ["/bin/bash", "azure-operations.sh"]
+        args:
+            - /bin/bash
+            - -c
+            - yum install -y jq;
+            - bash azure-operations.sh;
         env:
           - name: EMAIL_ID
             value: {{ $.Values.email_id }}
