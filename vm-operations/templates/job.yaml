@@ -13,7 +13,6 @@ spec:
         args:
             - /bin/bash
             - -c
-            - yum install -y jq;
             - bash azure-operations.sh;
         env:
           - name: EMAIL_ID
