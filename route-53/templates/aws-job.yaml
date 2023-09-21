@@ -26,9 +26,9 @@ spec:
                   name: aws-secret
                   key: HOSTED_ZONE_ID
             - name: DOMAIN_NAME
-              value: {{ $.Values.DOMAIN_NAME }} 
+              value: {{ $.Values.DOMAIN_NAME | quote }} 
             - name: IP_ADDRESS
-              value: {{ $.Values.IP_ADDRESS  }} 
+              value: {{ $.Values.IP_ADDRESS  | quote }} 
             - name: A
               value: {{ $.Values.A |default "true"  | quote}}
             - name: CNAME

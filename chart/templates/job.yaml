@@ -16,9 +16,9 @@ spec:
             - name: volume_size
               value: {{ .Values.volume_size |default 30  | quote }}
             - name: want_to_install_microk8s
-              value: {{ .Values.want_to_install_microk8s | default "true"  | quote}}
+              value: {{ .Values.want_to_install_microk8s | default "false"  | quote}}
             - name: want_to_install_devtron
-              value: {{ .Values.want_to_install_devtron |default "true" | quote }}
+              value: {{ .Values.want_to_install_devtron |default "false" | quote }}
           args:
             - /bin/bash
             - -c

@@ -1,26 +1,5 @@
 
-image: busybox
-imagePullPolicy: Always
-Env:
-  - name: NO_OF_CORES
-    value: 2
-  - name: VOLUME_SIZE
-    value: "0"
-  - name: INSTALL_DEVTRON
-    value: "true"
-  - name: INSTALL_MICROK8s
-    value: "true"
-imagePullSecrets: test
 
-resources: {}
-  # limits:
-  #   cpu: 100m
-  #   memory: 128Mi
-  # requests:
-  #   cpu: 100m
-  #   memory: 128Mi
-
-nodeSelector: {}
 
 affinity: {}
 rawYaml: []

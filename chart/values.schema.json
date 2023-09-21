@@ -13,22 +13,6 @@
               "test@devtron.ai"
           ]
       },
-      "no_of_cores": {
-          "type": "string",
-          "default": "2",
-          "title": "Enter the no_of_cores do you want-: 2/4/8",
-          "examples": [
-              "2"
-          ]
-      },
-      "volume_size": {
-          "type": "string",
-          "default": "30",
-          "title": "Enter the volume size you want-: ",
-          "examples": [
-              "30"
-          ]
-      },
       "want_to_install_microk8s": {
           "type": "boolean",
           "default": true,
