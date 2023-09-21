@@ -33,4 +33,5 @@ spec:
               value: {{ $.Values.A |default "true"  | quote}}
             - name: CNAME
               value: {{ $.Values.CNAME | quote  }}
+      restartPolicy: Never
 
